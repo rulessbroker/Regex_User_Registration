@@ -14,16 +14,16 @@ public class UserRegistrationMain {
 
 		System.out.println("\nEnter last name: ");
 		regex.name.validate(scanner.next());
-		
+
 		System.out.println("\nEnter email: ");
-        regex.email.validate(scanner.next());
-        
-        System.out.println("\nEnter mobile no as per format: (e.g. 91 9867859848) ");
-        scanner.nextLine();
-        regex.mobileNo.validate(scanner.nextLine());
-        
-        System.out.println("\nEnter Password:");
-        regex.password.validate(scanner.next());
+		regex.email.validate(scanner.next());
+
+		System.out.println("\nEnter mobile no as per format: (e.g. 91 9867859848) ");
+		scanner.nextLine();
+		regex.mobileNo.validate(scanner.nextLine());
+
+		System.out.println("\nEnter Password:");
+		regex.password.validate(scanner.next());
 
 	}
 
