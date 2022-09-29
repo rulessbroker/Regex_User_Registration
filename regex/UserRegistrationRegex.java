@@ -22,6 +22,16 @@ public class UserRegistrationRegex {
 			throw new InvalidUserDetailsException("Invalid email => " + email);
 		}
 	};
+	
+	public Validator mobileNo = (mobileNo) -> {
+        Pattern pattern = Pattern.compile("^[\\d]{2}\\s[\\d]{10}$");
+        boolean isValid = pattern.matcher(mobileNo).matches();
+        if (isValid) {
+            return true;
+        } else {
+            throw new InvalidUserDetailsException("Invalid Mobile Number => " + mobileNo);
+        }
+    };
 }
 
 interface Validator {

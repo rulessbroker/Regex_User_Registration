@@ -17,6 +17,11 @@ public class UserRegistrationMain {
 		
 		System.out.println("\nEnter email: ");
         regex.email.validate(scanner.next());
+        
+        System.out.println("\nEnter mobile no as per format: (e.g. 91 9867859848) ");
+        scanner.nextLine();
+        regex.mobileNo.validate(scanner.nextLine());
+
 	}
 
 }
