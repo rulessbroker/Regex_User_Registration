@@ -24,6 +24,9 @@ public class UserRegistrationMain {
 
 		System.out.println("\nEnter Password:");
 		regex.password.validate(scanner.next());
+		
+		System.out.println("\nValid Emails: ");
+        regex.email.validate(scanner.next());
 
 	}
 
