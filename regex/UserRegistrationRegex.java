@@ -22,26 +22,26 @@ public class UserRegistrationRegex {
 			throw new InvalidUserDetailsException("Invalid email => " + email);
 		}
 	};
-	
+
 	public Validator mobileNo = (mobileNo) -> {
-        Pattern pattern = Pattern.compile("^[\\d]{2}\\s[\\d]{10}$");
-        boolean isValid = pattern.matcher(mobileNo).matches();
-        if (isValid) {
-            return true;
-        } else {
-            throw new InvalidUserDetailsException("Invalid Mobile Number => " + mobileNo);
-        }
-    };
-    
-    public Validator password = (password) -> {
-        Pattern pattern = Pattern.compile("(?=.*[A-Z])(?=.*[^\\w\\d\\s:])(?=.*[0-9])[\\S]{8,}");
-        Boolean isValid = pattern.matcher(password).matches();
-        if (isValid) {
-            return true;
-        } else {
-            throw new InvalidUserDetailsException("Invalid Password => " + password);
-        }
-    };
+		Pattern pattern = Pattern.compile("^[\\d]{2}\\s[\\d]{10}$");
+		boolean isValid = pattern.matcher(mobileNo).matches();
+		if (isValid) {
+			return true;
+		} else {
+			throw new InvalidUserDetailsException("Invalid Mobile Number => " + mobileNo);
+		}
+	};
+
+	public Validator password = (password) -> {
+		Pattern pattern = Pattern.compile("(?=.*[A-Z])(?=.*[^\\w\\d\\s:])(?=.*[0-9])[\\S]{8,}");
+		Boolean isValid = pattern.matcher(password).matches();
+		if (isValid) {
+			return true;
+		} else {
+			throw new InvalidUserDetailsException("Invalid Password => " + password);
+		}
+	};
 }
 
 interface Validator {
