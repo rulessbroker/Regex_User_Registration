@@ -14,6 +14,9 @@ public class UserRegistrationMain {
 
 		System.out.println("\nEnter last name: ");
 		regex.name.validate(scanner.next());
+		
+		System.out.println("\nEnter email: ");
+        regex.email.validate(scanner.next());
 	}
 
 }
