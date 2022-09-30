@@ -43,7 +43,3 @@ public class UserRegistrationRegex {
 		}
 	};
 }
-
-interface Validator {
-	boolean validate(String data) throws InvalidUserDetailsException;
-}
